@@ -4,7 +4,8 @@
   "description": "A tool for calculating Japanese income tax.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "souffle"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,14 @@
     "chai": "^3.5.0",
     "codecov.io": "^0.1.6",
     "mocha": "^2.4.5",
-    "nyc": "^6.1.1"
+    "nyc": "^6.1.1",
+    "souffle-cli": "^3.1.0"
+  },
+  "souffle": {
+    "globals": [
+      "describe",
+      "it"
+    ],
+    "indent": 2
   }
 }
