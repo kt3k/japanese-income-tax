@@ -1,4 +1,4 @@
-# japanese-income-tax v0.1.0
+# japanese-income-tax v0.1.0 [![Circle CI](https://circleci.com/gh/kt3k/japanese-income-tax.svg?style=svg)](https://circleci.com/gh/kt3k/japanese-income-tax) [![codecov.io](https://codecov.io/github/kt3k/japanese-income-tax/coverage.svg?branch=master)](https://codecov.io/github/kt3k/japanese-income-tax?branch=master)
 
 > A tool for calculating Japanese income tax.
 
