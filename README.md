@@ -1,10 +1,10 @@
-# japanese-income-tax v0.1.0 (WIP)
+# japanese-income-tax v0.1.0
 
 > A tool for calculating Japanese income tax.
 
 This tool calculates Japanese income tax from the given taxable income.
 
-This tool based on the rules for 2016. The result includes the Great East Japan Earthquake Recovery Special tax (GEJERST).
+This tool based on the rules for 2016. The result includes the Reconstruction special income tax.
 
 # API
 
@@ -12,28 +12,57 @@ This tool based on the rules for 2016. The result includes the Great East Japan 
 var tax = require('japanese-income-tax')
 ```
 
-## tax.calculateIncomeTax(taxableIncome)
+## tax.incomeTax(taxableIncome)
 
 - @param {number} taxableIncome The taxable income
-- @return {number} The income tax
+- @return {number}
 
 Calculates the income tax.
 
-## tax.calculateEarthquakeRecovertPart(taxableIncome)
+## tax.specialIncomeTax(taxableIncome)
 
 - @param {number} taxableIncome The taxable income
-- @return {number} The Earthquake Recovery part of the income tax
+- @return {number}
 
-Calculates the Earthquake Recovery part of the income tax.
+Calculates the Reconstruction special income tax.
 
-## tax.calculateResidentTax(taxableIncome)
+## tax.totalIncomeTax(taxableIncome)
 
 - @param {number} taxableIncome The taxable income
-- @return {number} The resident tax
+- @return {number}
+
+Returns the total of the income tax and the special income tax.
+
+## tax.actualIncomeTax(taxableIncome)
+
+- @param {number} taxableIncome The taxable income
+- @return {number}
+
+Returns the actual amount you need to pay to the tax bureau.
+
+## tax.residentTax(taxableIncome)
+
+- @param {number} taxableIncome The taxable income
+- @return {number}
 
 Calculates the resident tax.
 
-# Notes
+# Example
 
-- The actual value you pay to the tax bureau is rounded down 3 digits. For example, if your income tax is 1,234,567, the amount you actually pay is 1,234,000.
-- In Japan, the income tax is paid to the tax bureau and the resident tax is paid to the city hall.
+```
+> var tax = require('japanese-income-tax')
+> tax.incomeTax(8005000)
+1205150
+> tax.specialIncomeTax(8005000)
+25308
+> tax.totalIncomeTax(8005000)
+1230458
+> tax.actualIncomeTax(8005000)
+1230400
+> tax.residentTax(8005000)
+800500
+```
+
+# License
+
+MIT
