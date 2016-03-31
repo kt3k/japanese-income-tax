@@ -4,7 +4,13 @@
 
 This tool calculates Japanese income tax from the given taxable income.
 
-This tool based on the rules for 2016. The result includes the Reconstruction special income tax.
+This tool is based on the rules for 2016.
+
+# Install
+
+Via npm:
+
+    npm install japanese-income-tax
 
 # API
 
@@ -38,7 +44,7 @@ Returns the total of the income tax and the special income tax.
 - @param {number} taxableIncome The taxable income
 - @return {number}
 
-Returns the actual amount you need to pay to the tax bureau.
+Returns the actual amount you need to pay to the tax office.
 
 ## tax.residentTax(taxableIncome)
 
