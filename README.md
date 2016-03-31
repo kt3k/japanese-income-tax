@@ -44,7 +44,7 @@ Returns the total of the income tax and the special income tax.
 - @param {number} taxableIncome The taxable income
 - @return {number}
 
-Returns the actual amount you need to pay to the tax office.
+Returns the actual amount of income taxes you need to pay to the tax office.
 
 ## tax.residentTax(taxableIncome)
 
