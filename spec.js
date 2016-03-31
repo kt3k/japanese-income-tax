@@ -44,7 +44,7 @@ describe('getDetails', function () {
       specialIncomeTax: 25308,
       totalIncomeTax: 1230458,
       actualIncomeTax: 1230400,
-      residentTax: 800500,
+      residentTax: 800500
     })
   })
 })
