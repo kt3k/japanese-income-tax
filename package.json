@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha spec.js",
-    "lint": "souffle"
+    "lint": "souffle",
+    "cov": "nyc --reporter=lcov npm test",
+    "codecov": "npm run cov && codecov < coverage/lcov.info"
   },
   "repository": {
     "type": "git",
@@ -33,5 +35,10 @@
       "it"
     ],
     "indent": 2
+  },
+  "nyc": {
+    "exclude": [
+      "spec.js"
+    ]
   }
 }
